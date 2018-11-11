@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { observable, action } from "mobx";
 import { observer } from "mobx-react";
 
+
+import styles from './styles.css'
 import Todo from "./Todo";
 
 @observer
@@ -9,8 +11,11 @@ class TodoList extends React.Component {
   @observable newTodoTitle = "";
 
   render() {
+
+    console.log(styles);
+
     return (
-      <div>
+      <div className={styles.test}>
         <form onSubmit={this.handleFormSubmit}>
           New Todo:
           <input
